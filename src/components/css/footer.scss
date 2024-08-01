@@ -1,0 +1,34 @@
+#footer {
+    background-color: var(--my-color-2);
+    border-top: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: max-content;
+    align-items: center;
+    padding: 10px;
+    margin-top: 50px;
+
+    .item {
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        transition: 0.2s;
+        svg {
+            margin-right: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #footer {
+        .item {
+            font-size: 13px;
+            transition: 0.2s;
+            svg {
+                width: 13px;
+            }
+        }
+    }
+
+}

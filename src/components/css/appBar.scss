@@ -1,0 +1,290 @@
+#app-bar {
+    z-index: 100;
+    box-shadow: 10px 10px 15px rgb(255, 255, 255);
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    a {
+        text-decoration: none;
+    }
+
+    .search-bar {
+        height: 35px;
+        display: flex;
+        width: 100%;
+        max-width: 700px;
+
+        select {
+            background-color: var(--primary);
+            color: black;
+            border-radius: 5px 0px 0px 5px;
+            border: none;
+            padding-left: 10px;
+
+            option {
+                color: black;
+                background-color: white;
+            }
+        }
+
+
+        button {
+            border-radius: 0px 5px 5px 0px;
+            width: 50px;
+            height: 100%;
+            border: none;
+            cursor: pointer;
+            background-color: var(--primary);
+
+            svg {
+                * {
+                    color: black;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0px 0px 5px grey;
+            }
+
+        }
+
+
+        input {
+            padding-left: 10px;
+            width: 100%;
+            background-color: white;
+            color: black;
+        }
+    }
+
+    .l1 {
+        background-color: var(--my-color);
+        padding: 0px 10px;
+        display: flex;
+        flex: none;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+
+        .menu-toggle-open {
+            display: none;
+            cursor: pointer;
+
+            @media screen and (max-width: 700px) {
+                display: block;
+            }
+
+            svg {
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+        .logo,
+        .search-bar,
+        .connexion,
+        .shopping-cart {
+            padding: 0px 10px;
+            margin: 0px 10px;
+            display: flex;
+        }
+
+        .logo {
+            transition: 0.2s;
+            font-size: 30px;
+            color: var(--text-color-white);
+        }
+
+        .shopping-cart,
+        .connexion {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+
+            background-color: var(--primary);
+
+            * {
+                color: var(--text-color-black);
+            }
+
+            &:hover {
+                transition: 0.2s;
+                box-shadow: 0px 0px 20px white;
+            }
+
+            svg {
+                margin: 5px;
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+    }
+
+    .l2-min {
+        width: 100%;
+        display: none;
+        padding: 10px;
+        border-top: 2px solid rgb(255, 255, 255, 0.5);
+        background-color: var(--my-color-2);
+    }
+
+
+    .l2 {
+        border-top: 2px solid rgb(255, 255, 255, 0.5);
+        display: flex;
+        background-color: var(--my-color-2);
+        width: 100%;
+        z-index: 10;
+
+        &.sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 0px 0px 15px black;
+        }
+
+        a {
+            // width: fit-content;
+            color: white;
+        }
+
+        .menu-toggle-open {
+            cursor: pointer;
+            margin-left: 20px;
+
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+
+            svg {
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+        .category-list {
+            width: 100%;
+            overflow-y: hidden;
+            display: flex;
+            align-items: center;
+
+
+            .active {
+                background-color: var(--primary);
+                color: black !important;
+            }
+
+            .category {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 5px;
+                border-radius: 10px;
+                padding: 0px 5px;
+                outline: 3px solid var(--primary-2);
+                color: white;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    #app-bar {
+        .l1 {
+
+            .logo {
+                transition: 0.2s;
+                font-size: 25px;
+            }
+
+            .search-bar {
+                display: none;
+            }
+
+            .connexion {
+                span {
+                    display: none;
+                }
+            }
+        }
+
+        .l2-min {
+            width: 100%;
+            display: flex;
+        }
+
+        .l2 {
+            .category-list {
+                // div {
+
+                //     &::-webkit-scrollbar {
+                //         display: none;
+                //     }
+                // }
+
+                .icon {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    font-size: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    color: black;
+    transition: 0.2s all ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+    transition: 0.2s all ease-in-out;
+    box-shadow: 0 0 5px grey;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+
+
+// ::-webkit-scrollbar {
+//     width: 10px;
+//     height: 10px;
+// }
+
+// ::-webkit-scrollbar-track {
+//     box-shadow: inset 0 0 5px grey;
+//     background-color: white;
+//     border-radius: 10px;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     background: rgb(210, 210, 210);
+//     border-radius: 10px;
+// }
+
+// ::-webkit-scrollbar-thumb:hover {
+//     background: rgb(61, 61, 61);
+// }

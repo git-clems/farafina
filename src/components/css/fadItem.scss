@@ -1,0 +1,26 @@
+#fad {
+    display: flex;
+    height: 100%;
+    width: 300px;
+
+    img {
+        border-radius: 20px;
+        object-fit: fill;
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width : 700px) {
+
+    #fad {
+        width: 100px;
+        height: 100px;
+
+        img {
+            border-radius: 50px;
+            object-fit: cover;
+        }
+    }
+}

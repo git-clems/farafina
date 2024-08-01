@@ -1,0 +1,13 @@
+#admin-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        max-width: 60vw;
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

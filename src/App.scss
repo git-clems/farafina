@@ -1,0 +1,18 @@
+@import '../src/global.scss';
+
+* {
+  font-family: var(--font-family);
+  padding: 0;
+  margin: 0;
+
+  img {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .page {
+    padding: 10px 10px 0px 10px;
+    min-height: 100vh;
+  }
+}
