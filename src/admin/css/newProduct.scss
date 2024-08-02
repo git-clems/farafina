@@ -1,0 +1,52 @@
+#admin-product {
+
+    form {
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        .line-1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            label {
+                margin-top: 20px;
+                span {
+                    color: red;
+                }
+            }
+
+            div {
+                margin-left: 20px;
+                margin-right: 20px;
+                @media screen and (max-width : 650px) {
+                    width: 100%;
+                }
+                input, textarea, select {
+                    width: 300px;
+                    padding: 5px;
+                    
+                    @media screen and (max-width : 650px) {
+                        width: 100%;
+                    }
+                }
+                textarea {
+                    max-height: 250px;
+                    min-height: 250px;
+                }
+            }
+        }
+
+        .image{
+            height: 250px;
+            width: 250px;
+            // border: 1px solid rgba(128, 128, 128, 0.15);
+            border-radius: 10px;
+            img {
+                height: 250px;
+                width: 250px;
+                object-fit: contain;
+            }
+        }
+    }
+}

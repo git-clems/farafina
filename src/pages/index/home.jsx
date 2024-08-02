@@ -10,8 +10,12 @@ function Home() {
             <section className='sec1'>
                 <Baniere></Baniere>
             </section>
-            <section>
-                <HorizontalItems borderRadius = {'1a0px'}/>
+            <section className='sec2'>
+                <DisplayProduct></DisplayProduct>
+                {/* <Filter></Filter> */}
+            </section>
+            <section className='sec3'>
+                <HorizontalItems borderRadius = {'10px'}/>
             </section>
             <section className='sec2'>
                 <DisplayProduct></DisplayProduct>

@@ -46,7 +46,7 @@ function DisplayProduct() {
                 const productsRef = collection(db, "products");
                 const snapshot = await getDocs(productsRef);
                 const dataArray = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-                console.log(dataArray);
+                // console.log(dataArray);
                 setData(dataArray)
             } catch (error) {
                 console.log(error.message);

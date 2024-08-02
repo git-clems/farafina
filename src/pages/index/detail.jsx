@@ -98,47 +98,37 @@ const Detail = () => {
                                         </div>
                                     </div>
                                 </div>
+
                                 {
                                     select.description?
                                     <div className="col-2">
-                                    <h5>Détails</h5>
-                                    {
-                                        select.description ?
-                                        <>
-                                            <p>
-                                                {select.description.title}
-                                            </p>
-                                            <ul>
-                                                {
-                                                    select.description.features?.map((feature) => {
-                                                        return(
-                                                            <>
-                                                                <li><strong>{feature.libelee}</strong></li>
-                                                                <p>{feature.description}</p>
-                                                            </>
-                                                        )
-                                                    })
-                                                }
-                                            </ul>
-                                        </>
-                                        :
-                                    ""
-                                    }
-                                </div>:
-                                null
+                                        <h5>Détails</h5>
+                                        {
+                                            <>
+                                                <p>
+                                                    {select.description}
+                                                </p>
+                                            </>
+                                        }
+                                    </div>
+                                    : null
                                 }
-                                <div className="col-2">
-                                    <h5>Caractéristiques</h5>
-                                    {
-                                        select.brand ?
-                                        <ul>
-                                            <li><strong>Brand : </strong>{select.brand}</li>
-                                            <li><strong>Country : </strong>{select.from}</li>
-                                        </ul>
-                                        :
-                                    ""
-                                    }
-                                </div>
+
+                                {
+                                    select.brand && select.from ?
+                                    <div className="col-2">
+                                        <h5>Caractéristiques</h5>
+                                        {
+                                            select.brand ?
+                                            <ul>
+                                                <li><strong>Brand : </strong>{select.brand}</li>
+                                                <li><strong>Country : </strong>{select.from}</li>
+                                                <li><strong>Catégory : </strong>{select.category}</li>
+                                            </ul>
+                                            : null
+                                        }
+                                    </div>:null
+                                }
                             </div>
                             <div className="l-3">
                                 <div className="product-chart">
